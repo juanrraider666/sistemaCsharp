@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2DF9EC85-036E-40A0-B61F-95AC2041F2D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>appPinturasV1</RootNamespace>
+    <AssemblyName>appPinturasV1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\clBDSql.cs" />
+    <Compile Include="Datos\clLoginD.cs" />
+    <Compile Include="Datos\clPersonaD.cs" />
+    <Compile Include="Datos\clPresentacionD.cs" />
+    <Compile Include="Datos\clProductoD.cs" />
+    <Compile Include="Datos\clRolD.cs" />
+    <Compile Include="Datos\clTipoD.cs" />
+    <Compile Include="Vista\clValidarV.cs" />
+    <Compile Include="Logica\clVentasL.cs" />
+    <Compile Include="Entidades\clLoginE.cs" />
+    <Compile Include="Entidades\clPersonaE.cs" />
+    <Compile Include="Entidades\clPresentacionE.cs" />
+    <Compile Include="Entidades\clProductoE.cs" />
+    <Compile Include="Entidades\clRolE.cs" />
+    <Compile Include="Entidades\clTipoE.cs" />
+    <Compile Include="Entidades\clVentaE.cs" />
+    <Compile Include="Logica\clLoginL.cs" />
+    <Compile Include="Logica\clPersonaL.cs" />
+    <Compile Include="Logica\clPresentacionL.cs" />
+    <Compile Include="Logica\clProductoL.cs" />
+    <Compile Include="Logica\clRolL.cs" />
+    <Compile Include="Logica\clTipoL.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\frmListarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmListarPersona.Designer.cs">
+      <DependentUpon>frmListarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmListarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmListarProducto.Designer.cs">
+      <DependentUpon>frmListarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmLoginV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmLoginV.Designer.cs">
+      <DependentUpon>frmLoginV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmMenuAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmMenuAdministrador.Designer.cs">
+      <DependentUpon>frmMenuAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRegistrarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRegistrarPersona.Designer.cs">
+      <DependentUpon>frmRegistrarPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRegistrarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRegistrarProducto.Designer.cs">
+      <DependentUpon>frmRegistrarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmTipoPresentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmTipoPresentacion.Designer.cs">
+      <DependentUpon>frmTipoPresentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmVentasV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmVentasV.Designer.cs">
+      <DependentUpon>frmVentasV.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vista\frmListarPersona.resx">
+      <DependentUpon>frmListarPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmListarProducto.resx">
+      <DependentUpon>frmListarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmLoginV.resx">
+      <DependentUpon>frmLoginV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmMenuAdministrador.resx">
+      <DependentUpon>frmMenuAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRegistrarPersona.resx">
+      <DependentUpon>frmRegistrarPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRegistrarProducto.resx">
+      <DependentUpon>frmRegistrarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmTipoPresentacion.resx">
+      <DependentUpon>frmTipoPresentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmVentasV.resx">
+      <DependentUpon>frmVentasV.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloqueado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hh.jpg" />
+    <None Include="Resources\tt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloqueado %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloqueado %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colour-d-wallpaper-square-texture-color-textured-wallpapers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colour-d-wallpaper-square-texture-color-textured-wallpapers1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
